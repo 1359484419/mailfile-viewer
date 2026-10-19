@@ -139,6 +139,8 @@ try:
             check([n for n, _ in ref] == [n for n, _ in ours], f'{src}: names {ref} vs {ours}')
         else:
             ref_n = [(n or f'attachment-{i + 1}', s) for i, (n, s) in enumerate(ref)]
+            # embedded messages (nested TNEF) get a ".dat" suffix so they can be opened in the viewer
+            ours = [(n[:-4] if n.endswith('.dat') and not r[0].endswith('.dat') else n, s) for (n, s), r in zip(ours, ref_n)] if len(ours) == len(ref_n) else ours
             check(ref_n == ours, f'{src}: tnefparse {ref_n} vs ours {ours}')
         checks['tnefparse_compared'] += 1
 except ImportError:

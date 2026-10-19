@@ -104,6 +104,14 @@ test('TNEF (winmail.dat) samples parse', async () => {
   assert.match(body.html, /Bill of Rights|Congress/i);
   const rtf = msgs(await h.open(read(path.join(SAMPLES, 'tnef/rtf.tnef')), 'winmail.dat'))[0];
   assert.ok(rtf.text.length > 50, 'text from compressed RTF');
+  // embedded message: attAttachData is only a placeholder, the real message is a nested TNEF in PR_ATTACH_DATA_OBJ
+  const dl = msgs(await h.open(read(path.join(SAMPLES, 'tnef/IPM-DistList.tnef')), 'winmail.dat'))[0];
+  const emb = dl.attachments[0];
+  assert.ok(emb.embedded && /\.dat$/.test(emb.name), `embedded attachment: ${emb.name}`);
+  const inner = await emb.getData();
+  assert.equal(new DataView(inner.buffer, inner.byteOffset, 4).getUint32(0, true), 0x223e9f78);
+  const innerMsg = msgs(await h.open(inner, emb.name))[0];
+  assert.ok(innerMsg, 'nested TNEF opens');
 });
 
 test('PST and OST archives parse', async () => {

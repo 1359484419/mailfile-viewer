@@ -230,7 +230,14 @@ export function parseTnef(data, meta = {}) {
       let content = at.attrs[ATT.AttachData];
       const obj = pv(ap, PR.ATTACH_DATA);
       let embedded = false;
-      if ((!content || !content.length) && obj && obj.length) {
+      const objType = obj && obj.length ? ap.get(PR.ATTACH_DATA).type : 0;
+      if (objType === T.OBJECT && obj.length > 16 && isTnef(obj.subarray(16))) {
+        // Embedded message: attAttachData then only holds a placeholder text
+        // ("This attachment is a MAPI 1.0 embedded message ..."); the real
+        // message is the nested TNEF stream in PR_ATTACH_DATA_OBJ.
+        content = obj.subarray(16);
+        embedded = true;
+      } else if ((!content || !content.length) && obj && obj.length) {
         const t = ap.get(PR.ATTACH_DATA).type;
         // PT_OBJECT data starts with a 16-byte interface id
         content = t === T.OBJECT ? obj.subarray(16) : obj;
@@ -244,7 +251,7 @@ export function parseTnef(data, meta = {}) {
       const data = content;
       return {
         name,
-        mimeType: pv(ap, PR.ATTACH_MIME_TAG) || guessMime(name),
+        mimeType: embedded ? 'application/ms-tnef' : (pv(ap, PR.ATTACH_MIME_TAG) || guessMime(name)),
         size: data.length,
         contentId: pv(ap, PR.ATTACH_CONTENT_ID) || '',
         inline: false,
