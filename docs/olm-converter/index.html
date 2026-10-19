@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OLM converter — open Mac .olm archives and convert to MBOX or EML</title>
+<meta name="description" content="Open .olm export files from Outlook for Mac on any computer. Browse folders, read messages and convert OLM to MBOX, EML, CSV or PDF in the browser without uploading.">
+<link rel="canonical" href="https://1359484419.github.io/mailfile-viewer/olm-converter/">
+
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https: http:; frame-src 'self' blob: data: about:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta property="og:title" content="OLM converter — open Mac .olm archives and convert to MBOX or EML">
+<meta property="og:description" content="Open .olm export files from Outlook for Mac on any computer. Browse folders, read messages and convert OLM to MBOX, EML, CSV or PDF in the browser without uploading.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://1359484419.github.io/mailfile-viewer/olm-converter/">
+<meta name="theme-color" content="#1f5fbf">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f5fbf'/%3E%3Cpath d='M7 10h18v12H7z' fill='none' stroke='white' stroke-width='2'/%3E%3Cpath d='M7 10l9 7 9-7' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"MailFile Viewer","url":"https://1359484419.github.io/mailfile-viewer/olm-converter/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","inLanguage":"en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Open .olm export files from Outlook for Mac on any computer. Browse folders, read messages and convert OLM to MBOX, EML, CSV or PDF in the browser without uploading."}</script>
+</head>
+<body>
+<header class="site-head"><div class="wrap"><a class="brand" href="../">MailFile Viewer</a><nav class="site-nav" aria-label="Formats"><a href="../">Home</a><a href="../msg-viewer/">MSG</a><a href="../winmail-dat-opener/">winmail.dat</a><a href="../pst-viewer/">PST / OST</a><a href="../olm-converter/" aria-current="page">OLM</a><a href="../eml-mbox-viewer/">EML / MBOX</a><a href="../privacy/">Privacy</a></nav><div class="langs"><a href="../" hreflang="en" lang="en">English</a><a href="../ja/" hreflang="ja" lang="ja">日本語</a><a href="../de/" hreflang="de" lang="de">Deutsch</a></div></div></header>
+<main class="wrap">
+<div class="hero"><h1>Open .olm archives on any computer</h1><p>Moving away from Outlook for Mac? Open the .olm export here and convert it to MBOX or EML for Apple Mail, Thunderbird or Gmail import.</p><span class="badge">Files stay on your device · no upload · no tracking</span></div>
+<div id="app"><noscript>This tool needs JavaScript to read files locally in your browser.</noscript></div>
+
+<section><h2>What is inside an .olm file</h2>
+<p>An .olm export is a ZIP archive. Each message is stored as a small XML document (subject, addresses, sent time, HTML body and an attachment list) and attachments sit next to it as ordinary files. Because it is not a mailbox format that other programs read, the usual advice is to re-import it into Outlook — which does not help if you no longer have a Mac with Outlook.</p>
+<p>This converter reads the ZIP directory directly and only decompresses what it needs, then maps the XML into regular messages with folders.</p></section>
+<section><h2>OLM to MBOX or EML</h2>
+<ul class="ticks">
+<li><b>MBOX</b>: one file per export; Apple Mail (File → Import Mailboxes) and Thunderbird import it directly.</li>
+<li><b>EML (.zip)</b>: one .eml per message, grouped by folder — good for archiving or for uploading to another mail service.</li>
+<li><b>CSV</b>: a spreadsheet overview for searching or legal review.</li>
+</ul></section>
+<section><h2>Limits</h2>
+<p>Calendar, contacts, notes and tasks inside the OLM are not converted yet — only mail. Very large exports (several GB) need a desktop browser with enough memory.</p></section>
+</main>
+<footer class="site-foot"><div class="wrap"><p>Outlook, Microsoft and Exchange are trademarks of Microsoft Corporation. MailFile Viewer is an independent open-source project and is not affiliated with, endorsed by or sponsored by Microsoft. Format names are used only to describe compatibility.</p><p>Open source (MIT). <a href="https://github.com/1359484419/mailfile-viewer" rel="noopener">GitHub</a> · <a href="../privacy/">Privacy</a></p></div></footer>
+<script type="module" src="../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://1359484419.github.io/mailfile-viewer/sitemap.xml

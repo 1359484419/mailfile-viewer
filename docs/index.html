@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MailFile Viewer — open MSG, EML, winmail.dat, PST and OLM in your browser</title>
+<meta name="description" content="Free private viewer and converter for .msg, .eml, winmail.dat, .pst, .ost and .olm files. Export to EML, MBOX, CSV or PDF in your browser. No upload.">
+<link rel="canonical" href="https://1359484419.github.io/mailfile-viewer/">
+<link rel="alternate" hreflang="en" href="https://1359484419.github.io/mailfile-viewer/">
+<link rel="alternate" hreflang="ja" href="https://1359484419.github.io/mailfile-viewer/ja/">
+<link rel="alternate" hreflang="de" href="https://1359484419.github.io/mailfile-viewer/de/">
+<link rel="alternate" hreflang="x-default" href="https://1359484419.github.io/mailfile-viewer/">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https: http:; frame-src 'self' blob: data: about:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta property="og:title" content="MailFile Viewer — open MSG, EML, winmail.dat, PST and OLM in your browser">
+<meta property="og:description" content="Free private viewer and converter for .msg, .eml, winmail.dat, .pst, .ost and .olm files. Export to EML, MBOX, CSV or PDF in your browser. No upload.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://1359484419.github.io/mailfile-viewer/">
+<meta name="theme-color" content="#1f5fbf">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f5fbf'/%3E%3Cpath d='M7 10h18v12H7z' fill='none' stroke='white' stroke-width='2'/%3E%3Cpath d='M7 10l9 7 9-7' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"MailFile Viewer","url":"https://1359484419.github.io/mailfile-viewer/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","inLanguage":"en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free private viewer and converter for .msg, .eml, winmail.dat, .pst, .ost and .olm files. Export to EML, MBOX, CSV or PDF in your browser. No upload."}</script>
+</head>
+<body>
+<header class="site-head"><div class="wrap"><a class="brand" href="./">MailFile Viewer</a><nav class="site-nav" aria-label="Formats"><a href="./" aria-current="page">Home</a><a href="msg-viewer/">MSG</a><a href="winmail-dat-opener/">winmail.dat</a><a href="pst-viewer/">PST / OST</a><a href="olm-converter/">OLM</a><a href="eml-mbox-viewer/">EML / MBOX</a><a href="privacy/">Privacy</a></nav><div class="langs"><a href="./" hreflang="en" lang="en">English</a><a href="ja/" hreflang="ja" lang="ja">日本語</a><a href="de/" hreflang="de" lang="de">Deutsch</a></div></div></header>
+<main class="wrap">
+<div class="hero"><h1>Open email files right in your browser</h1><p>View and convert .msg, .eml, winmail.dat, .pst, .ost, .olm and .mbox files. Everything runs on your device — your mail is never uploaded.</p><span class="badge">Files stay on your device · no upload · no tracking</span></div>
+<div id="app"><noscript>This tool needs JavaScript to read files locally in your browser.</noscript></div>
+
+<section><h2>What you can do</h2>
+<ul class="ticks">
+<li>Read a single saved message (.msg, .eml) or a whole mailbox archive (.pst, .ost, .olm, .mbox) with folders, search and attachments.</li>
+<li>Unpack <code>winmail.dat</code> / <code>ATT00001.dat</code> and get the real attachments out.</li>
+<li>Convert to standard formats: EML files in a ZIP, an MBOX mailbox for Thunderbird or Apple Mail, a CSV list of messages, a contacts CSV, or a PDF through your browser’s “Save as PDF”.</li>
+<li>Download every attachment of a folder at once as a ZIP.</li>
+</ul></section>
+<section><h2>Supported files</h2><table class="fmt">
+<thead><tr><th>File</th><th>What it is</th><th>View</th><th>Export to</th></tr></thead>
+<tbody>
+<tr><td>.msg</td><td>Single item saved from Outlook for Windows (OLE compound file)</td><td>Yes, incl. RTF-only bodies</td><td>EML, PDF (print), attachments</td></tr>
+<tr><td>.eml</td><td>Standard internet message (RFC 5322 / MIME)</td><td>Yes</td><td>EML, MBOX, PDF, attachments</td></tr>
+<tr><td>winmail.dat / ATT00001.dat</td><td>TNEF wrapper sent by Exchange in “rich text” mode</td><td>Yes, plus the hidden attachments</td><td>EML, PDF, attachments</td></tr>
+<tr><td>.pst / .ost</td><td>Personal folders / offline cache (ANSI, Unicode, 4K-page OST)</td><td>Folder tree, list, search</td><td>EML (zip), MBOX, CSV, contacts CSV, PDF, attachments</td></tr>
+<tr><td>.olm</td><td>Export archive from Outlook for Mac (ZIP + XML)</td><td>Folder tree, list, search</td><td>EML (zip), MBOX, CSV, PDF, attachments</td></tr>
+<tr><td>.mbox</td><td>Unix mailbox used by Thunderbird, Apple Mail, Google Takeout</td><td>Yes</td><td>EML (zip), CSV, PDF, attachments</td></tr>
+</tbody></table></section>
+<section><h2>How private is it?</h2>
+<p>The page is a static site. When you pick a file the browser reads it into memory and the parsers run in this tab — there is no server that receives your mail, no analytics script and no third-party tracker. Remote images inside messages are blocked until you allow them, so opening an old newsletter does not ping the sender. You can disconnect from the internet after the page has loaded and it still works. Details on the <a href="privacy/">privacy page</a>.</p></section>
+<section class="pro"><h2>Pro — coming soon</h2><p>Everything on this page is free. A future Pro version is planned for very large archives (multi-gigabyte PST streaming to disk), batch PDF files and priority fixes for problem files. There is nothing to buy yet.</p></section>
+<section class="faq"><h2>Questions</h2><details><summary>Do I need Outlook or a Microsoft 365 subscription?</summary><div>No. The file formats are read directly by open-source parsers running in your browser. It works on Windows, macOS, Linux and ChromeOS.</div></details><details><summary>How large a file can I open?</summary><div>The whole file is loaded into the browser’s memory, so the practical limit depends on your device: around 1–2&nbsp;GB on a typical laptop with Chrome, Edge or Firefox, and a few hundred MB on phones and tablets. Very large PST files are best split first.</div></details><details><summary>Can it open password-protected PST files?</summary><div>No. Encrypted or password-protected PST files are not supported and the tool will tell you so.</div></details><details><summary>What happens to embedded messages?</summary><div>An email attached inside another email (or inside winmail.dat) shows an “Open” button and opens as its own message.</div></details></section>
+</main>
+<footer class="site-foot"><div class="wrap"><p>Outlook, Microsoft and Exchange are trademarks of Microsoft Corporation. MailFile Viewer is an independent open-source project and is not affiliated with, endorsed by or sponsored by Microsoft. Format names are used only to describe compatibility.</p><p>Open source (MIT). <a href="https://github.com/1359484419/mailfile-viewer" rel="noopener">GitHub</a> · <a href="privacy/">Privacy</a></p></div></footer>
+<script type="module" src="assets/app.js"></script>
+</body>
+</html>

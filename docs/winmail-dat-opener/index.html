@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>winmail.dat opener — extract attachments from winmail.dat and ATT00001.dat</title>
+<meta name="description" content="Got a winmail.dat or ATT00001.dat attachment? Open it in your browser to read the message and download the real attachments. Free, private, works on iPhone and Mac.">
+<link rel="canonical" href="https://1359484419.github.io/mailfile-viewer/winmail-dat-opener/">
+
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https: http:; frame-src 'self' blob: data: about:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta property="og:title" content="winmail.dat opener — extract attachments from winmail.dat and ATT00001.dat">
+<meta property="og:description" content="Got a winmail.dat or ATT00001.dat attachment? Open it in your browser to read the message and download the real attachments. Free, private, works on iPhone and Mac.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://1359484419.github.io/mailfile-viewer/winmail-dat-opener/">
+<meta name="theme-color" content="#1f5fbf">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f5fbf'/%3E%3Cpath d='M7 10h18v12H7z' fill='none' stroke='white' stroke-width='2'/%3E%3Cpath d='M7 10l9 7 9-7' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"MailFile Viewer","url":"https://1359484419.github.io/mailfile-viewer/winmail-dat-opener/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","inLanguage":"en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Got a winmail.dat or ATT00001.dat attachment? Open it in your browser to read the message and download the real attachments. Free, private, works on iPhone and Mac."}</script>
+</head>
+<body>
+<header class="site-head"><div class="wrap"><a class="brand" href="../">MailFile Viewer</a><nav class="site-nav" aria-label="Formats"><a href="../">Home</a><a href="../msg-viewer/">MSG</a><a href="../winmail-dat-opener/" aria-current="page">winmail.dat</a><a href="../pst-viewer/">PST / OST</a><a href="../olm-converter/">OLM</a><a href="../eml-mbox-viewer/">EML / MBOX</a><a href="../privacy/">Privacy</a></nav><div class="langs"><a href="../" hreflang="en" lang="en">English</a><a href="../ja/" hreflang="ja" lang="ja">日本語</a><a href="../de/" hreflang="de" lang="de">Deutsch</a></div></div></header>
+<main class="wrap">
+<div class="hero"><h1>Open winmail.dat and get your attachments back</h1><p>Received a mysterious winmail.dat or ATT00001.dat? Drop it here to see the message and download the files hidden inside.</p><span class="badge">Files stay on your device · no upload · no tracking</span></div>
+<div id="app"><noscript>This tool needs JavaScript to read files locally in your browser.</noscript></div>
+
+<section><h2>Why you got a winmail.dat</h2>
+<p>When an Exchange or Outlook user sends mail in “Rich Text” format, the server wraps the formatting and the attachments in a container called TNEF (Transport Neutral Encapsulation Format) and attaches it as <code>winmail.dat</code>. Apple Mail, Gmail, Thunderbird and most phones do not understand TNEF, so the recipient sees one useless .dat file instead of the PDF or spreadsheet that was actually sent.</p></section>
+<section><h2>What this opener extracts</h2>
+<ul class="ticks">
+<li>All attached files with their original long file names, including names with accents or non-Latin characters.</li>
+<li>The message body — plain text, HTML, or HTML recovered from compressed RTF.</li>
+<li>Embedded messages (an email attached inside the TNEF) which you can open with one click.</li>
+<li>Subject, sender and date when the sender’s server included them.</li>
+</ul>
+<p>If you received the whole email as a <code>.eml</code> file with winmail.dat inside, open the .eml: the winmail.dat shows up as an attachment with an <b>Open</b> button.</p></section>
+<section><h2>How to stop receiving winmail.dat</h2>
+<p>The fix is on the sender’s side: ask them to send in HTML or plain-text format instead of Rich Text, or their administrator can set the remote domain’s TNEF setting to off. Until then, this page lets you read what they send.</p></section>
+<section class="faq"><h2>winmail.dat questions</h2><details><summary>Does it work on iPhone and Android?</summary><div>Yes. Save the winmail.dat attachment to Files, open this page in Safari or Chrome and choose the file. Downloads go to your Files / Downloads folder.</div></details><details><summary>The winmail.dat only contains formatting, no files</summary><div>That happens: some TNEF attachments carry only the rich-text body. The viewer then shows just the message text.</div></details></section>
+</main>
+<footer class="site-foot"><div class="wrap"><p>Outlook, Microsoft and Exchange are trademarks of Microsoft Corporation. MailFile Viewer is an independent open-source project and is not affiliated with, endorsed by or sponsored by Microsoft. Format names are used only to describe compatibility.</p><p>Open source (MIT). <a href="https://github.com/1359484419/mailfile-viewer" rel="noopener">GitHub</a> · <a href="../privacy/">Privacy</a></p></div></footer>
+<script type="module" src="../assets/app.js"></script>
+</body>
+</html>

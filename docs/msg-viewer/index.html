@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MSG file viewer — open .msg emails online without installing anything</title>
+<meta name="description" content="Open .msg email files in your browser on Mac, Windows, Linux or Chromebook. Read the message, download attachments, convert MSG to EML or PDF. Runs locally, no upload.">
+<link rel="canonical" href="https://1359484419.github.io/mailfile-viewer/msg-viewer/">
+
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https: http:; frame-src 'self' blob: data: about:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta property="og:title" content="MSG file viewer — open .msg emails online without installing anything">
+<meta property="og:description" content="Open .msg email files in your browser on Mac, Windows, Linux or Chromebook. Read the message, download attachments, convert MSG to EML or PDF. Runs locally, no upload.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://1359484419.github.io/mailfile-viewer/msg-viewer/">
+<meta name="theme-color" content="#1f5fbf">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f5fbf'/%3E%3Cpath d='M7 10h18v12H7z' fill='none' stroke='white' stroke-width='2'/%3E%3Cpath d='M7 10l9 7 9-7' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"MailFile Viewer","url":"https://1359484419.github.io/mailfile-viewer/msg-viewer/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","inLanguage":"en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Open .msg email files in your browser on Mac, Windows, Linux or Chromebook. Read the message, download attachments, convert MSG to EML or PDF. Runs locally, no upload."}</script>
+</head>
+<body>
+<header class="site-head"><div class="wrap"><a class="brand" href="../">MailFile Viewer</a><nav class="site-nav" aria-label="Formats"><a href="../">Home</a><a href="../msg-viewer/" aria-current="page">MSG</a><a href="../winmail-dat-opener/">winmail.dat</a><a href="../pst-viewer/">PST / OST</a><a href="../olm-converter/">OLM</a><a href="../eml-mbox-viewer/">EML / MBOX</a><a href="../privacy/">Privacy</a></nav><div class="langs"><a href="../" hreflang="en" lang="en">English</a><a href="../ja/" hreflang="ja" lang="ja">日本語</a><a href="../de/" hreflang="de" lang="de">Deutsch</a></div></div></header>
+<main class="wrap">
+<div class="hero"><h1>Open .msg files without installing anything</h1><p>Drop a .msg file to read it, save the attachments, or convert it to .eml or PDF. The file stays on your computer.</p><span class="badge">Files stay on your device · no upload · no tracking</span></div>
+<div id="app"><noscript>This tool needs JavaScript to read files locally in your browser.</noscript></div>
+
+<section><h2>About .msg files</h2>
+<p>A .msg file is a single email, meeting request or contact that someone dragged out of Outlook for Windows. Inside it is an OLE “compound file” — a little file system holding MAPI properties for the sender, recipients, body and each attachment. Mac and Linux mail apps cannot read it, which is why people end up with “I can’t open this attachment” problems when a colleague forwards a message as an attachment.</p>
+<p>This viewer reads the compound file directly. It shows the HTML body when there is one, falls back to the plain-text body, and if the message was only stored as compressed RTF it decompresses the RTF and extracts the original HTML or text.</p></section>
+<section><h2>Converting MSG to EML</h2>
+<p>Click <b>Save .eml</b> to get a standards-based copy you can open in Apple Mail, Thunderbird or any mail client. The converter writes a proper MIME message: sender, recipients, date and subject headers (UTF-8 encoded where needed), both plain-text and HTML alternatives, inline images and every attachment. Messages that are attached to the .msg are turned into nested .eml files.</p></section>
+<section><h2>MSG to PDF</h2>
+<p>Use <b>Print / PDF</b> and choose “Save as PDF” in the print dialog. The printout includes a header block (from, to, cc, date, attachment names) followed by the message body. Remote images are left out so the PDF is created without contacting any server.</p></section>
+<section class="faq"><h2>MSG questions</h2><details><summary>The body is empty or garbled — why?</summary><div>Some very old .msg files store text in a legacy code page. The viewer uses the code page recorded in the file; if it is wrong, please report the problem (without sending the file) using the link that appears with the error.</div></details><details><summary>Can I open .oft templates?</summary><div>Templates use the same container format and usually open, but this is not tested extensively.</div></details></section>
+</main>
+<footer class="site-foot"><div class="wrap"><p>Outlook, Microsoft and Exchange are trademarks of Microsoft Corporation. MailFile Viewer is an independent open-source project and is not affiliated with, endorsed by or sponsored by Microsoft. Format names are used only to describe compatibility.</p><p>Open source (MIT). <a href="https://github.com/1359484419/mailfile-viewer" rel="noopener">GitHub</a> · <a href="../privacy/">Privacy</a></p></div></footer>
+<script type="module" src="../assets/app.js"></script>
+</body>
+</html>

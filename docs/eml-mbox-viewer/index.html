@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EML and MBOX viewer — read .eml files and mbox mailboxes online</title>
+<meta name="description" content="Read .eml messages and .mbox mailboxes (Thunderbird, Apple Mail, Google Takeout) in your browser. Search, save attachments, export to CSV or PDF. No upload.">
+<link rel="canonical" href="https://1359484419.github.io/mailfile-viewer/eml-mbox-viewer/">
+
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https: http:; frame-src 'self' blob: data: about:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta property="og:title" content="EML and MBOX viewer — read .eml files and mbox mailboxes online">
+<meta property="og:description" content="Read .eml messages and .mbox mailboxes (Thunderbird, Apple Mail, Google Takeout) in your browser. Search, save attachments, export to CSV or PDF. No upload.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://1359484419.github.io/mailfile-viewer/eml-mbox-viewer/">
+<meta name="theme-color" content="#1f5fbf">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f5fbf'/%3E%3Cpath d='M7 10h18v12H7z' fill='none' stroke='white' stroke-width='2'/%3E%3Cpath d='M7 10l9 7 9-7' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"MailFile Viewer","url":"https://1359484419.github.io/mailfile-viewer/eml-mbox-viewer/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","inLanguage":"en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Read .eml messages and .mbox mailboxes (Thunderbird, Apple Mail, Google Takeout) in your browser. Search, save attachments, export to CSV or PDF. No upload."}</script>
+</head>
+<body>
+<header class="site-head"><div class="wrap"><a class="brand" href="../">MailFile Viewer</a><nav class="site-nav" aria-label="Formats"><a href="../">Home</a><a href="../msg-viewer/">MSG</a><a href="../winmail-dat-opener/">winmail.dat</a><a href="../pst-viewer/">PST / OST</a><a href="../olm-converter/">OLM</a><a href="../eml-mbox-viewer/" aria-current="page">EML / MBOX</a><a href="../privacy/">Privacy</a></nav><div class="langs"><a href="../" hreflang="en" lang="en">English</a><a href="../ja/" hreflang="ja" lang="ja">日本語</a><a href="../de/" hreflang="de" lang="de">Deutsch</a></div></div></header>
+<main class="wrap">
+<div class="hero"><h1>Read .eml files and MBOX mailboxes</h1><p>Open saved .eml messages or whole .mbox files (Thunderbird, Apple Mail, Google Takeout) to read, search and export them — privately, in your browser.</p><span class="badge">Files stay on your device · no upload · no tracking</span></div>
+<div id="app"><noscript>This tool needs JavaScript to read files locally in your browser.</noscript></div>
+
+<section><h2>EML files</h2>
+<p>An .eml file is the raw internet message: headers, then MIME parts for text, HTML and attachments. The viewer decodes quoted-printable, base64 and encoded-word headers in any charset (including ISO-2022-JP and Shift_JIS), shows inline images, and lists every attachment. The <b>Headers</b> tab shows the original header block — useful for checking where a suspicious message really came from.</p></section>
+<section><h2>MBOX files</h2>
+<p>MBOX stores many messages in one text file separated by “From ” lines. Google Takeout exports Gmail this way. Open the .mbox to browse it as a list, search by sender or subject (optionally in message bodies), save single messages as .eml, export the list to CSV, or pull out all attachments as a ZIP.</p></section>
+<section class="faq"><h2>EML / MBOX questions</h2><details><summary>My Google Takeout mbox is several gigabytes</summary><div>Large files are read into memory; a desktop browser with 8&nbsp;GB+ RAM handles about 1–2&nbsp;GB comfortably. Split bigger files first.</div></details><details><summary>Are scripts in HTML emails executed?</summary><div>No. Messages are shown in a sandboxed frame with scripts disabled and a strict content security policy.</div></details></section>
+</main>
+<footer class="site-foot"><div class="wrap"><p>Outlook, Microsoft and Exchange are trademarks of Microsoft Corporation. MailFile Viewer is an independent open-source project and is not affiliated with, endorsed by or sponsored by Microsoft. Format names are used only to describe compatibility.</p><p>Open source (MIT). <a href="https://github.com/1359484419/mailfile-viewer" rel="noopener">GitHub</a> · <a href="../privacy/">Privacy</a></p></div></footer>
+<script type="module" src="../assets/app.js"></script>
+</body>
+</html>

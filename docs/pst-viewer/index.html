@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PST and OST viewer — browse and convert .pst/.ost to EML, MBOX, CSV</title>
+<meta name="description" content="Browse .pst and .ost mailbox files in your browser. Search folders, read messages, save attachments and export to EML, MBOX, CSV or PDF. Nothing is uploaded.">
+<link rel="canonical" href="https://1359484419.github.io/mailfile-viewer/pst-viewer/">
+
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https: http:; frame-src 'self' blob: data: about:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta property="og:title" content="PST and OST viewer — browse and convert .pst/.ost to EML, MBOX, CSV">
+<meta property="og:description" content="Browse .pst and .ost mailbox files in your browser. Search folders, read messages, save attachments and export to EML, MBOX, CSV or PDF. Nothing is uploaded.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://1359484419.github.io/mailfile-viewer/pst-viewer/">
+<meta name="theme-color" content="#1f5fbf">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f5fbf'/%3E%3Cpath d='M7 10h18v12H7z' fill='none' stroke='white' stroke-width='2'/%3E%3Cpath d='M7 10l9 7 9-7' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"MailFile Viewer","url":"https://1359484419.github.io/mailfile-viewer/pst-viewer/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","inLanguage":"en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Browse .pst and .ost mailbox files in your browser. Search folders, read messages, save attachments and export to EML, MBOX, CSV or PDF. Nothing is uploaded."}</script>
+</head>
+<body>
+<header class="site-head"><div class="wrap"><a class="brand" href="../">MailFile Viewer</a><nav class="site-nav" aria-label="Formats"><a href="../">Home</a><a href="../msg-viewer/">MSG</a><a href="../winmail-dat-opener/">winmail.dat</a><a href="../pst-viewer/" aria-current="page">PST / OST</a><a href="../olm-converter/">OLM</a><a href="../eml-mbox-viewer/">EML / MBOX</a><a href="../privacy/">Privacy</a></nav><div class="langs"><a href="../" hreflang="en" lang="en">English</a><a href="../ja/" hreflang="ja" lang="ja">日本語</a><a href="../de/" hreflang="de" lang="de">Deutsch</a></div></div></header>
+<main class="wrap">
+<div class="hero"><h1>Browse PST and OST files without Outlook</h1><p>Open a .pst or .ost archive, browse its folders and messages, and export them to EML, MBOX, CSV or PDF — all inside your browser.</p><span class="badge">Files stay on your device · no upload · no tracking</span></div>
+<div id="app"><noscript>This tool needs JavaScript to read files locally in your browser.</noscript></div>
+
+<section><h2>Supported PST and OST variants</h2>
+<ul class="ticks">
+<li>ANSI PST (Outlook 97–2002) and Unicode PST (Outlook 2003 and later).</li>
+<li>OST offline caches including the 4&nbsp;KB-page format written by Outlook 2013 and newer.</li>
+<li>Folders, sub-folders, emails, meeting requests, attachments and messages attached to messages.</li>
+</ul>
+<p>Not supported: password-protected or “high encryption” PST files, and badly corrupted files (try your mail program’s repair tool first).</p></section>
+<section><h2>Exporting a PST</h2>
+<ol>
+<li>Open the file and pick a folder on the left (or search across everything).</li>
+<li>Choose the scope — current folder or all loaded messages — and a format.</li>
+<li><b>EML (.zip)</b> keeps one standard file per message, organised by folder; <b>MBOX</b> can be imported into Thunderbird (ImportExportTools NG) or Apple Mail; <b>CSV</b> gives a spreadsheet of date, sender, recipients, subject and attachment names; <b>Contacts (CSV)</b> lists every address with message counts.</li>
+</ol></section>
+<section><h2>Size and speed</h2>
+<p>The archive is read into memory, then folders are indexed; message bodies and attachments are decoded only when you open or export them. A 15&nbsp;MB test archive with 70 messages indexes in well under a second on a laptop. For multi-gigabyte PST files use a desktop browser with plenty of free memory.</p></section>
+<section class="faq"><h2>PST questions</h2><details><summary>Is my PST uploaded anywhere?</summary><div>No. The page has no backend. You can verify this in your browser’s developer tools: opening a file creates no network requests.</div></details><details><summary>Why are some sender addresses shown as long Exchange paths?</summary><div>Messages sent inside an Exchange organisation store an internal (X.500) address. When the SMTP address is present in the file it is used instead.</div></details></section>
+</main>
+<footer class="site-foot"><div class="wrap"><p>Outlook, Microsoft and Exchange are trademarks of Microsoft Corporation. MailFile Viewer is an independent open-source project and is not affiliated with, endorsed by or sponsored by Microsoft. Format names are used only to describe compatibility.</p><p>Open source (MIT). <a href="https://github.com/1359484419/mailfile-viewer" rel="noopener">GitHub</a> · <a href="../privacy/">Privacy</a></p></div></footer>
+<script type="module" src="../assets/app.js"></script>
+</body>
+</html>

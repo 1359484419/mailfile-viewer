@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy and how MailFile Viewer works</title>
+<meta name="description" content="How MailFile Viewer processes email files locally in your browser: no uploads, no analytics, no trackers, open-source parsers and sandboxed message display.">
+<link rel="canonical" href="https://1359484419.github.io/mailfile-viewer/privacy/">
+
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https: http:; frame-src 'self' blob: data: about:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta property="og:title" content="Privacy and how MailFile Viewer works">
+<meta property="og:description" content="How MailFile Viewer processes email files locally in your browser: no uploads, no analytics, no trackers, open-source parsers and sandboxed message display.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://1359484419.github.io/mailfile-viewer/privacy/">
+<meta name="theme-color" content="#1f5fbf">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f5fbf'/%3E%3Cpath d='M7 10h18v12H7z' fill='none' stroke='white' stroke-width='2'/%3E%3Cpath d='M7 10l9 7 9-7' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"MailFile Viewer","url":"https://1359484419.github.io/mailfile-viewer/privacy/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","inLanguage":"en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"How MailFile Viewer processes email files locally in your browser: no uploads, no analytics, no trackers, open-source parsers and sandboxed message display."}</script>
+</head>
+<body>
+<header class="site-head"><div class="wrap"><a class="brand" href="../">MailFile Viewer</a><nav class="site-nav" aria-label="Formats"><a href="../">Home</a><a href="../msg-viewer/">MSG</a><a href="../winmail-dat-opener/">winmail.dat</a><a href="../pst-viewer/">PST / OST</a><a href="../olm-converter/">OLM</a><a href="../eml-mbox-viewer/">EML / MBOX</a><a href="../privacy/" aria-current="page">Privacy</a></nav><div class="langs"><a href="../" hreflang="en" lang="en">English</a><a href="../ja/" hreflang="ja" lang="ja">日本語</a><a href="../de/" hreflang="de" lang="de">Deutsch</a></div></div></header>
+<main class="wrap">
+<div class="hero"><h1>Privacy and how it works</h1><p>Short version: your files never leave your device, and this site does not track you.</p><span class="badge">Files stay on your device · no upload · no tracking</span></div>
+
+
+<section><h2>Local processing</h2>
+<p>MailFile Viewer is a set of static files (HTML, CSS and one JavaScript bundle) hosted on GitHub Pages. When you choose a file, the browser’s File API gives the page the bytes and the parsers run in the same tab. There is no upload endpoint and no backend at all. After the page has loaded you can go offline and keep working.</p></section>
+<section><h2>No tracking</h2>
+<p>The site includes no analytics, advertising or third-party scripts, sets no cookies and does not use local storage for your mail. Fonts are system fonts. The hosting provider (GitHub) may keep standard server logs of page requests, as for any website; those logs never include your files.</p></section>
+<section><h2>Safe display</h2>
+<p>HTML email is rendered in a sandboxed frame with scripts, forms and plugins disabled and a content security policy that blocks network access. Remote images stay blocked unless you click “Load remote images” for that message, which prevents tracking pixels from reporting that you opened it.</p></section>
+<section><h2>Open source</h2>
+<p>The code is MIT-licensed. Parsing uses these open-source libraries: <a href="https://github.com/epfromer/pst-extractor" rel="noopener">pst-extractor</a> (MIT) for PST/OST, <a href="https://github.com/HiraokaHyperTools/msgreader" rel="noopener">@kenjiuno/msgreader</a> (Apache-2.0) for MSG, <a href="https://github.com/postalsys/postal-mime" rel="noopener">postal-mime</a> (MIT-0) for EML, <a href="https://github.com/101arrowz/fflate" rel="noopener">fflate</a> (MIT) for ZIP, <a href="https://github.com/NaturalIntelligence/fast-xml-parser" rel="noopener">fast-xml-parser</a> (MIT) for OLM XML. The TNEF and RTF decoders are written from Microsoft’s published open specifications [MS-OXTNEF] and [MS-OXRTFEX].</p></section>
+<section><h2>Reporting problems</h2>
+<p>If a file fails to open, the error message has a link that pre-fills a GitHub issue with the error code and your browser version only. Please never attach private email to a public issue.</p></section>
+</main>
+<footer class="site-foot"><div class="wrap"><p>Outlook, Microsoft and Exchange are trademarks of Microsoft Corporation. MailFile Viewer is an independent open-source project and is not affiliated with, endorsed by or sponsored by Microsoft. Format names are used only to describe compatibility.</p><p>Open source (MIT). <a href="https://github.com/1359484419/mailfile-viewer" rel="noopener">GitHub</a> · <a href="../privacy/">Privacy</a></p></div></footer>
+
+</body>
+</html>

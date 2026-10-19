@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MailFile Viewer — MSG・EML・winmail.dat・PST・OLM をブラウザで開く</title>
+<meta name="description" content=".msg、.eml、winmail.dat、.pst、.ost、.olm ファイルをブラウザだけで閲覧・変換。EML・MBOX・CSV・PDF に書き出し可能。ファイルはアップロードされません。">
+<link rel="canonical" href="https://1359484419.github.io/mailfile-viewer/ja/">
+<link rel="alternate" hreflang="en" href="https://1359484419.github.io/mailfile-viewer/">
+<link rel="alternate" hreflang="ja" href="https://1359484419.github.io/mailfile-viewer/ja/">
+<link rel="alternate" hreflang="de" href="https://1359484419.github.io/mailfile-viewer/de/">
+<link rel="alternate" hreflang="x-default" href="https://1359484419.github.io/mailfile-viewer/">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https: http:; frame-src 'self' blob: data: about:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta property="og:title" content="MailFile Viewer — MSG・EML・winmail.dat・PST・OLM をブラウザで開く">
+<meta property="og:description" content=".msg、.eml、winmail.dat、.pst、.ost、.olm ファイルをブラウザだけで閲覧・変換。EML・MBOX・CSV・PDF に書き出し可能。ファイルはアップロードされません。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://1359484419.github.io/mailfile-viewer/ja/">
+<meta name="theme-color" content="#1f5fbf">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f5fbf'/%3E%3Cpath d='M7 10h18v12H7z' fill='none' stroke='white' stroke-width='2'/%3E%3Cpath d='M7 10l9 7 9-7' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"MailFile Viewer","url":"https://1359484419.github.io/mailfile-viewer/ja/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","inLanguage":"ja","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":".msg、.eml、winmail.dat、.pst、.ost、.olm ファイルをブラウザだけで閲覧・変換。EML・MBOX・CSV・PDF に書き出し可能。ファイルはアップロードされません。"}</script>
+</head>
+<body>
+<header class="site-head"><div class="wrap"><a class="brand" href="../ja/">MailFile Viewer</a><nav class="site-nav" aria-label="Formats"><a href="../">Home</a><a href="../msg-viewer/">MSG</a><a href="../winmail-dat-opener/">winmail.dat</a><a href="../pst-viewer/">PST / OST</a><a href="../olm-converter/">OLM</a><a href="../eml-mbox-viewer/">EML / MBOX</a><a href="../privacy/">Privacy</a></nav><div class="langs"><a href="../" hreflang="en" lang="en">English</a><a href="../ja/" hreflang="ja" lang="ja">日本語</a><a href="../de/" hreflang="de" lang="de">Deutsch</a></div></div></header>
+<main class="wrap">
+<div class="hero"><h1>メールファイルをブラウザでそのまま開く</h1><p>.msg・.eml・winmail.dat・.pst・.ost・.olm・.mbox を閲覧・変換できます。処理はすべてお使いの端末内で行われ、メールがアップロードされることはありません。</p><span class="badge">ファイルは端末から出ません・アップロードなし・追跡なし</span></div>
+<div id="app"><noscript>This tool needs JavaScript to read files locally in your browser.</noscript></div>
+
+<section><h2>できること</h2>
+<ul class="ticks">
+<li>単体メール（.msg・.eml）やメールボックス全体（.pst・.ost・.olm・.mbox）を、フォルダー・検索・添付ファイル付きで閲覧。</li>
+<li><code>winmail.dat</code>／<code>ATT00001.dat</code> を開いて、中に埋もれた本来の添付ファイルを取り出す。</li>
+<li>標準形式へ変換：EML（ZIP まとめ）、Thunderbird や Apple Mail で読める MBOX、メール一覧 CSV、連絡先 CSV、ブラウザの「PDF として保存」による PDF。</li>
+<li>フォルダー内の添付ファイルを ZIP で一括ダウンロード。</li>
+</ul></section>
+<section><h2>日本語メールへの対応</h2>
+<p>ISO-2022-JP（JIS）、Shift_JIS、EUC-JP、UTF-8 の件名・本文・添付ファイル名をデコードします。古い .msg や winmail.dat ではファイル内に記録されたコードページを使って文字化けを防ぎます。CSV は Excel で文字化けしないよう BOM 付き UTF-8 で書き出します。</p></section>
+<section><h2>プライバシー</h2>
+<p>このサイトは静的ファイルのみで構成され、サーバー側の処理はありません。アクセス解析やトラッキングのスクリプトも入っていません。HTML メールはスクリプト無効のサンドボックス内で表示し、外部画像は許可するまでブロックします。</p></section>
+<section class="pro"><h2>Pro 版（準備中）</h2><p>現在の機能はすべて無料です。数 GB 規模の PST のストリーミング処理や PDF 一括出力などを Pro 版として予定していますが、まだ販売はしていません。</p></section>
+<section class="faq"><h2>よくある質問</h2><details><summary>Outlook や Microsoft 365 は必要ですか？</summary><div>不要です。Windows・Mac・Linux・Chromebook のブラウザで動作します。</div></details><details><summary>どのくらい大きなファイルを開けますか？</summary><div>ファイル全体をメモリに読み込むため端末次第です。一般的なノート PC なら 1〜2 GB 程度、スマートフォンでは数百 MB が目安です。</div></details><details><summary>パスワード付き PST は開けますか？</summary><div>暗号化・パスワード保護された PST には対応していません。</div></details></section>
+</main>
+<footer class="site-foot"><div class="wrap"><p>Outlook、Microsoft、Exchange は Microsoft Corporation の商標です。MailFile Viewer は独立したオープンソースプロジェクトであり、Microsoft とは提携・承認・後援の関係にありません。形式名は互換性の説明のためにのみ使用しています。</p><p>オープンソース（MIT ライセンス）。 <a href="https://github.com/1359484419/mailfile-viewer" rel="noopener">GitHub</a> · <a href="../privacy/">Privacy</a></p></div></footer>
+<script type="module" src="../assets/app.js"></script>
+</body>
+</html>
