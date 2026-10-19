@@ -120,6 +120,10 @@ ${PAGES.map((p) => `  <url><loc>${SITE_URL + p.path}</loc><lastmod>${today}</las
 </urlset>
 `);
 fs.writeFileSync(path.join(out, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}sitemap.xml\n`);
-fs.writeFileSync(path.join(out, '404.html'), renderPage({ path: '404/', lang: 'en', noTool: true, title: 'Page not found — MailFile Viewer', description: 'Page not found.', h1: 'Page not found', lead: '<a href="/mailfile-viewer/">Go to the email file viewer</a>', body: '' }).replace(/<link rel="canonical"[^>]*>\n/, '<meta name="robots" content="noindex">\n'));
+// 404.html is served for any missing path at any depth, so it must use root-absolute URLs, not "../".
+const BASE_PATH = new URL(SITE_URL).pathname;
+fs.writeFileSync(path.join(out, '404.html'), renderPage({ path: '404/', lang: 'en', noTool: true, title: 'Page not found — MailFile Viewer', description: 'Page not found.', h1: 'Page not found', lead: `<a href="${BASE_PATH}">Go to the email file viewer</a>`, body: '' })
+  .replace(/<link rel="canonical"[^>]*>\n/, '<meta name="robots" content="noindex">\n')
+  .replace(/(href|src)="\.\.\//g, `$1="${BASE_PATH}`));
 fs.writeFileSync(path.join(out, '.nojekyll'), '');
 console.log(`built ${PAGES.length} pages -> ${path.relative(root, out)} (site ${SITE_URL})`);
